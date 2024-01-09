@@ -76,9 +76,9 @@ entities:
           </div>
 
           <ha-icon icon="mdi:flash" class="hpwidget-icon" id="hpwidget-ELEFF" style="color:yellow;top:42px;left:82px;{% if ((states('binary_sensor.thermiq_mqtt_vp1_boiler_3kw_on')=='off') and (states('binary_sensor.thermiq_mqtt_vp1_boiler_6kw_on')=='off') ) %}display:none;{% endif %}"></ha-icon>
-          <ha-icon icon="mdi:cog" class="hpwidget-icon" id="hpwidget-KOMPR" style="top:155px;left:70px;--mdc-icon-size:45px;{% if (states('binary_sensor.thermiq_mqtt_vp1_compressor_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}"></ha-icon>
-          <ha-icon icon="mdi:fan" class="hpwidget-icon" id="hpwidget-BRINESPIN" style="top:126px;left:11px;{% if (states('binary_sensor.thermiq_mqtt_vp1_brine_pump_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}"></ha-icon>
-          <ha-icon icon="mdi:fan" class="hpwidget-icon" id="hpwidget-CIRKPSPIN" style="top:228px;left:147px;{% if (states('binary_sensor.thermiq_mqtt_vp1_supply_pump_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}"></ha-icon>
+          <ha-icon icon="mdi:cog" class="hpwidget-icon" id="hpwidget-KOMPR" style="top:155px;left:70px;--mdc-icon-size:45px;{% if (states('binary_sensor.thermiq_mqtt_vp1_compressor_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}filter:contrast(0);"></ha-icon>
+          <ha-icon icon="mdi:fan" class="hpwidget-icon" id="hpwidget-BRINESPIN" style="top:126px;left:11px;{% if (states('binary_sensor.thermiq_mqtt_vp1_brine_pump_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}filter:contrast(0);"></ha-icon>
+          <ha-icon icon="mdi:fan" class="hpwidget-icon" id="hpwidget-CIRKPSPIN" style="top:228px;left:147px;{% if (states('binary_sensor.thermiq_mqtt_vp1_supply_pump_on')=='on') %}animation: rotating 2s linear infinite;{% endif %}filter:contrast(0);"></ha-icon>
           <ha-icon icon="mdi:alert-circle" class="hpwidget-icon" id="hpwidget-ALERT" style="color:red;top:42px;left:82px;animation: blink  1s steps(5, start) infinite;{% if (states('sensor.thermiq_mqtt_vp1_communication_status')=='Ok') %}display:none;{% endif %}"></ha-icon>
           <ha-icon icon="mdi:stop" class="hpwidget-icon" id="hpwidget-EVU" style="color:red;top:62px;left:82px;animation:blink 1s steps(5, start) infinite;{% if (states('sensor.thermiq_mqtt_vp1_heatpump_evu_block') | int ==0) %}display:none;{% endif %}">EVU</ha-icon>
         </div>
